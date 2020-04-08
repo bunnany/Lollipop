@@ -27,11 +27,14 @@ public class Lollipop{
     
     /** Drawe a red lollipop on a stick */
     private void drawLollipop() {
+        double left = X-SIZE/2.0;           // left of lollipop
+        double top = Y-SIZE/2.0;            //top of lollipop
+        double bottom = Y+STICK;            // bottom of stick
         UI.setLineWidth(SIZE/8.0);          // set line width to 10
-        UI.drawLine(X, Y, X, Y+STICK);      // draw line
+        UI.drawLine(X, Y, X, bottom);      // draw line
         UI.setLineWidth(1);                 // set line width to 1
         UI.setColor(Color.red);             // set color to red
-        UI.fillOval(X-SIZE/2.0, Y-SIZE/2.0, SIZE, SIZE);      // fill oval    @(260,160), 80x80
+        UI.fillOval(left, top, SIZE, SIZE);      // fill oval    @(260,160), 80x80
     }
 
     public static void main(String[] args){
